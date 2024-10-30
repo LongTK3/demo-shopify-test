@@ -1,0 +1,298 @@
+{%- style -%}
+  @media screen and (min-width: 568px) {
+  .main-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 50px;
+    color: #1F1F1F;
+  }
+
+  .row-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    max-width: 1376px;
+  }
+
+  .row-container .image-class {
+    width: 684px;
+    height: 800px;
+    border-radius: 24px;
+  }
+
+   .row-container .second-block {
+    padding-top: 372px !important;
+    gap: 24px;
+}
+
+  .row-container .block-text-container h2 {
+    font-family: Lora;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 74px;
+    margin-top: 0 !important;
+    margin-bottom: 41px !important;
+    word-spacing: 0.05em;
+        letter-spacing: -0.01em;
+  }
+
+    .row-container .block-text-container h3 {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    width: 100%;
+    margin: 16px 0 !important;
+    word-spacing: 0.05em;
+    letter-spacing: -0.01em;
+  }
+
+  .row-container .block-text-container {
+    width: 684px;
+    height: 800px;
+    border-radius: 24px;
+    padding: 294px 53px 48px 53px;
+    background-color: #F4F0EA;
+  }
+
+  .row-container .block-text-container .block-text {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    width: 100%;
+  }
+
+    .row-container .block-text-container .block-text p {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    width: 100%;
+    margin: 0 !important;
+    word-spacing: 0.05em;
+    letter-spacing: -0.01em;
+  }
+
+    .row-container .block-text-container .block-text h1 {
+    font-family: Lora;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 74px;
+    text-align: left;
+    margin: 0 !important;
+    word-spacing: -0.05em;
+  }
+
+    .row-container .block-text-container .block-text h4 {
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    word-spacing: 0.05em;
+    letter-spacing: -0.01em;
+  }
+
+}
+
+@media screen and (max-width: 567px) {
+  .main-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 567px;
+    color: #2C2A29;
+    padding: 4px;
+  }
+
+  .row-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  .row-container .block-text-container { 
+    order: 1;
+    width: 100%;
+    border-radius: 16px;
+    background-color: #F4F0EA;
+  }
+
+  .row-container .image-class {
+    order: 2;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
+
+   .row-container .second-block {
+    padding: 20px 18px !important;
+}
+  
+
+  .row-container .block-text-container h2 {
+    font-family: Lato;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 42px;
+    text-align: left;
+  }
+
+    .row-container .block-text-container h3 {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    width: 100%;
+    margin: 18px 0 !important;
+  }
+
+  .row-container .block-text-container {
+    max-width: 359px;
+    border-radius: 16px;
+    padding: 34px 18px;
+    background-color: #F4F0EA;
+  }
+
+  .row-container .block-text-container .block-text {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    width: 100%;
+  }
+
+    .row-container .block-text-container .block-text p {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    width: 100%;
+    margin: 0 !important;
+    word-spacing: 0.3em;
+    letter-spacing: -0.02em;
+  }
+
+    .row-container .block-text-container .block-text h1 {
+    font-family: Lora;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 42px;
+    text-align: left;
+    margin: 0 !important;
+    margin-bottom: 8px;
+    word-spacing: -0.05em;
+  }
+
+    .row-container .block-text-container .block-text h4 {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    margin: 8px 0 !important;
+    word-spacing: 0.2em;
+    letter-spacing: -0.05em;
+    
+  }
+}
+
+
+{%- endstyle -%}
+
+<div class="main-container2" id="{{ section.id }}">
+  {% assign row_open = false %}
+  {% for block in section.blocks %}
+    {% if forloop.index == 1 or forloop.index == 3 %}
+      <div class="row-container">
+      {% assign row_open = true %}
+    {% endif %}
+    {% if block.type == 'subtext2' %}
+      <div class="block-text-container {% if forloop.index == 3 %}second-block{% endif %} ">
+        <div class="block-text">
+          {{ block.settings.subtext2 }}
+        </div>
+      </div>
+    {% endif %}
+    {% if block.type == 'block_image2' %}
+      <div class="block-image">
+        {{ block.settings.image_with_text_image2 | image_url: width:684 | image_tag: class:"image-class" }}
+      </div>
+    {% endif %}
+
+    
+
+    {% if forloop.index == 2 or forloop.index == 4%}
+      {% if row_open %}
+      </div>
+      {% assign row_open = false %}
+    {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% if row_open %}
+    </div>
+  {% endif %}
+</div>
+
+
+
+
+{% schema %}
+{
+  "name": "Section Demo2",
+  "settings": [
+    {
+    "type": "text",
+    "id": "products_per_page",
+    "label": "DEMO",
+    "default": "DEMO"
+  }
+  ],
+  "blocks": [
+    {
+      "name": "Block image",
+      "type": "block_image2",
+      "settings": [
+      {
+        "type": "image_picker",
+        "id": "image_with_text_image2",
+        "label": "Image"
+      }
+      ]
+    },
+     {
+      "name": "subtext2",
+      "type": "subtext2",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "subtext2",
+          "default": "<h1>Lorem ipsum</h1><p><h4>Excepteur eiusmod consectetur</h4></p><p>Proident dolore nisi eiusmod excepteur aliquip esse ut excepteur. Non excepteur sunt reprehenderit sit ex ullamco eiusmod Lorem incididunt nisi mollit nostrud. Irure velit enim elit minim commodo qui culpa cillum duis fugiat consequat pariatur.</p><p><h4>Quis aliqua reprehenderit</h4></p><p>Proident dolore nisi eiusmod excepteur aliquip esse ut excepteur. Non excepteur sunt reprehenderit sit ex ullamco eiusmod Lorem incididunt nisi mollit nostrud. Irure velit enim elit minim commodo qui culpa cillum duis fugiat consequat pariatur.</p><p><h4>Ad sit cillum amet duis quis commodo</h4></p><p>Proident dolore nisi eiusmod excepteur aliquip esse ut excepteur. Non excepteur sunt reprehenderit sit ex ullamco eiusmod Lorem incididunt nisi mollit nostrud. Irure velit enim elit minim commodo qui culpa cillum duis fugiat consequat pariatur.</p>",
+          "label": "Text Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+			{
+				"name": "Section Demo2",
+				"settings": {},
+				"blocks": []
+			}
+		],
+}
+{% endschema %}
